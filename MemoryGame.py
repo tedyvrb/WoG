@@ -39,8 +39,9 @@ def play(difficulty):
 
     game_explanation(difficulty)
     secret_list = generate_sequence(difficulty)
-    os.system('cls' if os.name == 'nt' else 'clear')
+    print(f'Try to remember this list and type it again: {secret_list}')
     time.sleep(5)
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     user_list = get_list_from_user(difficulty)
     user_list = [int(x) for x in user_list]
