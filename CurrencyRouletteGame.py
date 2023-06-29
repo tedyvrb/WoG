@@ -7,7 +7,7 @@ def game_explanation(difficulty):
 Programme generate random numbers from 1 to 100 for USD amount
 Computer will convert this amount to ILS due to today gate
 Try to guess how much it is in ILS..... 
-if you type value +- {delta}  you are win!!!''')
+if your value will be +- {delta}  you are win!!!''')
 
 def get_money_interval(amount_usd):
     base_currency = "USD"
@@ -46,7 +46,7 @@ def play(difficulty):
     # --------------------------------------------
 
     delta_nis = 5 - difficulty
-    if abs(amount_nis - users_nis) < delta_nis:
+    if abs(amount_nis - users_nis) <= delta_nis:
         print('Yor are win!!!')
     else:
         print('Looser!!!!')
