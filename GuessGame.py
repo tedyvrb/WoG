@@ -25,7 +25,7 @@ def play(difficulty):
     secret = generate_number(difficulty)
 
     # check the secret
-    print(f'My secret num is : {secret}')
+    print(f'My secret num CHECK: {secret}')
 
     user_number=get_guess_from_user()
     if compare_result(secret,int(user_number)):
