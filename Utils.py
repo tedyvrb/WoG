@@ -1,0 +1,2 @@
+SCORES_FILE_NAME = 'Score.py'
+BAD_RETURN_CODE = 404

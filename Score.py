@@ -1,1 +1,4 @@
-def add_score()
+def add_score(POINTS_OF_WINNING, DIFFICULTY):
+    return POINTS_OF_WINNING = (DIFFICULTY * 3) + 5
+
+
