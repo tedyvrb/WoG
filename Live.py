@@ -65,7 +65,7 @@ def load_game():
     # print (type (game_difficulty))
     # ----------------------------------------
 
-
+    # Play 3 Games
     go_to_the_game = True
     # Play game -= #1 =-
     if game_num == 1:
@@ -84,6 +84,8 @@ def load_game():
         while go_to_the_game:
             CurrencyRouletteGame.play(game_difficulty)
             go_to_the_game = play_again()
+
+
 
     return game_num, game_difficulty
 
