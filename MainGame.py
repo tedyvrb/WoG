@@ -4,7 +4,7 @@ import random
 
 # print(welcome('Helena'))
 # return 2 parameters game_number and game_difficulty
-# game_num, game_difficulty = load_game()
+game_num, game_difficulty = load_game()
 
-Score.add_score(random.randint(1, 5))
+# Score.add_score(random.randint(1, 5))
 

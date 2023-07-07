@@ -3,7 +3,7 @@ import random
 def game_explanation(difficulty):
     print(f'''We start the game
 Programme generate the random number from 1 to {difficulty}
-Choose the random number if you choose the same number you are win!!!''')
+Tape the number, if you choose the same number as a computer you are win!!!''')
 
 
 def generate_number(difficulty):

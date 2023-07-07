@@ -93,7 +93,7 @@ def load_game():
             go_to_the_game = play_again()
 
 
-
+    play_again()
     return game_num, game_difficulty
 
 

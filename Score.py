@@ -1,8 +1,9 @@
 import os
+import Utils
 
 def add_score(difficulty):
     # score_file_path = r'C:\Users\user\OneDrive - Qmasters\DevOps\Python\Python Project\WOG'
-    score_file = 'Scores.txt'
+    score_file = Utils.SCORES_FILE_NAME
 
     # If file not exist or removed created new file Scores
     if not os.path.exists(score_file):
