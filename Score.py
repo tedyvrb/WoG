@@ -6,13 +6,14 @@ def add_score(difficulty):
     score_file = Utils.SCORES_FILE_NAME
 
     # If file not exist or removed created new file Scores
-    if not os.path.exists(score_file):
+    if not os.path.exists(score_file) or difficulty == 0:
         with open(score_file, 'w') as file:
             file.write('0')
+            file.close()
 
     # Check Scores_file content
     score = open(score_file, 'r').read()
-    print(f'Score check is: {score}, difficulty is: {difficulty}')
+    print(f'Score check from the file is: {score}, difficulty is: {difficulty}')
     if score.isdigit():
         score = int(score)
     else:
