@@ -48,6 +48,8 @@ def play(difficulty):
     delta_nis = 5 - difficulty
     if abs(amount_nis - users_nis) <= delta_nis:
         print('Yor are win!!!')
+        return True
     else:
         print('Looser!!!!')
+        return False
 

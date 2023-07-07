@@ -28,10 +28,12 @@ def play(difficulty):
     print(f'My secret num CHECK: {secret}')
 
     user_number=get_guess_from_user()
-    if compare_result(secret,int(user_number)):
+    if compare_result(secret, int(user_number)):
         print('Your are WIN!!!')
+        return True
     else:
         print('Looser try again )))')
+        return False
 
 
 

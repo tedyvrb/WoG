@@ -52,7 +52,7 @@ def play(difficulty):
     print(f'Users list check: {user_list}')
     # --------------------------------------------
 
-    if is_list_equal(secret_list,user_list):
+    if is_list_equal(secret_list, user_list):
         print('You WIN!!!')
         return True
     else:

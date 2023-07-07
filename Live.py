@@ -71,19 +71,25 @@ def load_game():
     # Play game -= #1 =-
     if game_num == 1:
         while go_to_the_game:
-            GuessGame.play(game_difficulty)
+            win = GuessGame.play(game_difficulty)
+            if win:
+                Score.add_score(game_difficulty)
             go_to_the_game = play_again()
 
     # Play game -= #2 =-
     elif game_num == 2:
         while go_to_the_game:
-            MemoryGame.play(game_difficulty)
+            win = MemoryGame.play(game_difficulty)
+            if win:
+                Score.add_score(game_difficulty)
             go_to_the_game = play_again()
 
     # Play game -= #3 =-
     elif game_num == 3:
         while go_to_the_game:
-            CurrencyRouletteGame.play(game_difficulty)
+            win = CurrencyRouletteGame.play(game_difficulty)
+            if win:
+                Score.add_score(game_difficulty)
             go_to_the_game = play_again()
 
 
