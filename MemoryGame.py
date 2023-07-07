@@ -17,7 +17,7 @@ def generate_sequence(difficulty):
 def get_list_from_user(difficulty):
     list_of_numbers = []
     for i in range(difficulty):
-        user_num=input(f'Enter number {i+1}: ')
+        user_num = input(f'Enter number {i+1}: ')
         if user_num.isdigit():
             list_of_numbers.append(user_num)
         else:

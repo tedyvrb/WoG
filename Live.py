@@ -2,6 +2,7 @@ import GuessGame
 import MemoryGame
 import CurrencyRouletteGame
 import Score
+import Utils
 
 def welcome(name):
     print(f'''Hello {name} and welcome to the Wold of Games (WoG).
@@ -36,6 +37,9 @@ def load_game():
     game_difficulty = 0
     game_ok = False
     difficulty_ok = False
+
+    # start the score file
+    Score.add_score(game_difficulty)
 
     print('''1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back
 2. MGuess Game - guess a number and see if you chose like the computer
@@ -93,7 +97,7 @@ def load_game():
             go_to_the_game = play_again()
 
 
-    play_again()
+    # play_again()
     return game_num, game_difficulty
 
 
