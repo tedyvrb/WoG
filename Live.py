@@ -1,6 +1,7 @@
 import GuessGame
 import MemoryGame
 import CurrencyRouletteGame
+import Score
 
 def welcome(name):
     print(f'''Hello {name} and welcome to the Wold of Games (WoG).
