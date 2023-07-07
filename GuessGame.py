@@ -7,12 +7,14 @@ Tape the number, if you choose the same number as a computer you are win!!!''')
 
 
 def generate_number(difficulty):
-    start = 1
-    return random.randint(start, difficulty)
-
+    return random.randint(1, difficulty)
 
 def get_guess_from_user():
-     return input('Type your number: ')
+    # my_num = input('Type your number: ')
+    user_num = input(f'Enter number : ')
+    while not user_num.isdigit():
+        user_num = input('Bad input try again: ')
+    return user_num
 
 def compare_result(secret, get_guess_from_user):
     if secret != get_guess_from_user:
@@ -27,7 +29,7 @@ def play(difficulty):
     # check the secret
     print(f'My secret num CHECK: {secret}')
 
-    user_number=get_guess_from_user()
+    user_number = get_guess_from_user()
     if compare_result(secret, int(user_number)):
         print('Your are WIN!!!')
         return True
