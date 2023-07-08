@@ -42,7 +42,7 @@ def load_game():
     Score.add_score(game_difficulty)
 
     print('''1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back
-2. MGuess Game - guess a number and see if you chose like the computer
+2. Guess Game - guess a number and see if you chose like the computer
 3. Currency Roulette - try and guess the value of a random amount of USD in ILS''')
 
     # check the game number parameters
@@ -73,16 +73,16 @@ def load_game():
 
     # Start to Play Games
     go_to_the_game = True
-    # Play game -= #1 GuessGame =-
+    # Play game -= #1 MemoryGame =-
     if game_num == 1:
         while go_to_the_game:
-            GuessGame.play(game_difficulty)
+            MemoryGame.play(game_difficulty)
             go_to_the_game = play_again()
 
-    # Play game -= #2 MemoryGame =-
+    # Play game -= #2 GuessGame =-
     elif game_num == 2:
         while go_to_the_game:
-            MemoryGame.play(game_difficulty)
+            GuessGame.play(game_difficulty)
             go_to_the_game = play_again()
 
     # Play game -= #3 CurrencyRouletteGame =-
