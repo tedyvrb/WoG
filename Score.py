@@ -8,7 +8,7 @@ def add_score(difficulty):
     # If file not exist or removed created new file Scores
     if (not os.path.exists(score_file)) or difficulty == 0:
         with open(score_file, 'w') as file:
-            file.write('0')
+            file.write('Start the Game CHECK')
             file.close()
 
     # Check Scores_file content
@@ -16,8 +16,8 @@ def add_score(difficulty):
     print(f'Score check from the file is: {score}, difficulty is: {difficulty}')
     if score.isdigit() and score != 0:
         score = int(score)
-        points_of_wings = (difficulty * 3) + 5
-        new_score = score + points_of_wings
+        points_of_winnigs = (difficulty * 3) + 5
+        new_score = score + points_of_winnigs
     else:
         new_score = 0
 
