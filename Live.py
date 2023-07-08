@@ -58,6 +58,7 @@ def load_game():
         if is_digital(str(game_difficulty)):
             if num_is_valid(int(game_difficulty), max_of_difficulty):
                 difficulty_ok = True
+    # ---------------------------------------------
 
     game_num = int(game_num)
     game_difficulty = int(game_difficulty)
