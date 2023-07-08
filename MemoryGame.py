@@ -1,6 +1,7 @@
 import random
 import os
 import time
+import Score
 
 def game_explanation(difficulty):
     print(f'''We start the game
@@ -54,6 +55,7 @@ def play(difficulty):
 
     if is_list_equal(secret_list, user_list):
         print('You WIN!!!')
+        Score.add_score(difficulty)
         return True
     else:
         print('Looser!!!')

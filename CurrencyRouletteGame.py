@@ -1,5 +1,6 @@
 import requests
 import random
+import Score
 
 def game_explanation(difficulty):
     delta = 5 - int(difficulty)
@@ -48,6 +49,7 @@ def play(difficulty):
     delta_nis = 5 - difficulty
     if abs(amount_nis - users_nis) <= delta_nis:
         print('Yor are win!!!')
+        Score.add_score(difficulty)
         return True
     else:
         print('Looser!!!!')

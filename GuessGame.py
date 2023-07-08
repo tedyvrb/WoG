@@ -1,5 +1,5 @@
 import random
-
+import Score
 def game_explanation(difficulty):
     print(f'''We start the game
 Programme generate the random number from 1 to {difficulty}
@@ -32,6 +32,7 @@ def play(difficulty):
     user_number = get_guess_from_user()
     if compare_result(secret, int(user_number)):
         print('Your are WIN!!!')
+        Score.add_score(difficulty)
         return True
     else:
         print('Looser try again )))')
