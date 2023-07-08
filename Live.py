@@ -70,21 +70,21 @@ def load_game():
     # print (type (game_difficulty))
     # ----------------------------------------
 
-    # Play 3 Games
+    # Start to Play Games
     go_to_the_game = True
-    # Play game -= #1 =-
+    # Play game -= #1 GuessGame =-
     if game_num == 1:
         while go_to_the_game:
             GuessGame.play(game_difficulty)
             go_to_the_game = play_again()
 
-    # Play game -= #2 =-
+    # Play game -= #2 MemoryGame =-
     elif game_num == 2:
         while go_to_the_game:
             MemoryGame.play(game_difficulty)
             go_to_the_game = play_again()
 
-    # Play game -= #3 =-
+    # Play game -= #3 CurrencyRouletteGame =-
     elif game_num == 3:
         while go_to_the_game:
             CurrencyRouletteGame.play(game_difficulty)
