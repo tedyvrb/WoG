@@ -35,64 +35,60 @@ def load_game():
     max_of_difficulty = 5
     game_num = 0
     game_difficulty = 0
-    game_ok = False
-    difficulty_ok = False
+
+    go_to_the_game = True
 
     # start the score file
     Score.add_score(game_difficulty)
 
-    print('''1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back
+    while go_to_the_game:
+        print('''1. Memory Game - a sequence of numbers will appear for 1 second and you have to guess it back
 2. Guess Game - guess a number and see if you chose like the computer
 3. Currency Roulette - try and guess the value of a random amount of USD in ILS''')
 
-    # check the game number parameters
-    while not game_ok:
-        game_num = get_game()
-        if is_digital(str(game_num)):
-           if num_is_valid(int(game_num), max_of_games):
-               game_ok = True
+        game_ok = False
+        difficulty_ok = False
 
-    #check the difficulty parameter is valid
-    while not difficulty_ok:
-        game_difficulty = get_difficulty()
-        if is_digital(str(game_difficulty)):
-            if num_is_valid(int(game_difficulty), max_of_difficulty):
-                difficulty_ok = True
-    # ---------------------------------------------
+        # Check the game number parameters
+        while not game_ok:
+            game_num = get_game()
+            if is_digital(str(game_num)):
+               if num_is_valid(int(game_num), max_of_games):
+                   game_ok = True
 
-    game_num = int(game_num)
-    game_difficulty = int(game_difficulty)
+        # Check the difficulty parameter is valid
+        while not difficulty_ok:
+            game_difficulty = get_difficulty()
+            if is_digital(str(game_difficulty)):
+                if num_is_valid(int(game_difficulty), max_of_difficulty):
+                    difficulty_ok = True
+        # ---------------------------------------------
 
-    # ==== check parameters ===========
-    # game_num = 3
-    # game_difficulty = 3
-    print(f'Game = {game_num}, Difficulty = {game_difficulty}')
-    # print(type (game_num))
-    # print (type (game_difficulty))
-    # ----------------------------------------
+        game_num = int(game_num)
+        game_difficulty = int(game_difficulty)
 
-    # Start to Play Games
-    go_to_the_game = True
-    # Play game -= #1 MemoryGame =-
-    if game_num == 1:
-        while go_to_the_game:
+        # ==== check parameters ===========
+        # game_num = 3
+        # game_difficulty = 3
+        print(f'Game = {game_num}, Difficulty = {game_difficulty}')
+        # ----------------------------------------
+
+        # Start to Play Games
+        # Play game -= #1 MemoryGame =-
+        if game_num == 1:
             MemoryGame.play(game_difficulty)
-            go_to_the_game = play_again()
 
-    # Play game -= #2 GuessGame =-
-    elif game_num == 2:
-        while go_to_the_game:
+        # Play game -= #2 GuessGame =-
+        elif game_num == 2:
             GuessGame.play(game_difficulty)
-            go_to_the_game = play_again()
 
-    # Play game -= #3 CurrencyRouletteGame =-
-    elif game_num == 3:
-        while go_to_the_game:
+        # Play game -= #3 CurrencyRouletteGame =-
+        elif game_num == 3:
             CurrencyRouletteGame.play(game_difficulty)
-            go_to_the_game = play_again()
 
+        # Start play again
+        go_to_the_game = play_again()
 
-    # play_again()
     return game_num, game_difficulty
 
 
