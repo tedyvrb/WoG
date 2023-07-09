@@ -12,7 +12,7 @@ def generate_sequence(difficulty):
     for i in range(difficulty):
         list_of_numbers.append(random.randint(1, 101))
 
-    #print list !!!check!!!
+    # print list !!!check!!!
     print(f'Secret list check: {list_of_numbers}')
     return list_of_numbers
 
