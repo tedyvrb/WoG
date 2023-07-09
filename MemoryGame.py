@@ -1,7 +1,7 @@
 import random
-import os
 import time
 import Score
+import Utils
 
 def game_explanation(difficulty):
     print(f'''We start the game
@@ -11,6 +11,7 @@ def generate_sequence(difficulty):
     list_of_numbers = []
     for i in range(difficulty):
         list_of_numbers.append(random.randint(1, 101))
+
     #print list !!!check!!!
     print(f'Secret list check: {list_of_numbers}')
     return list_of_numbers
@@ -41,16 +42,15 @@ def play(difficulty):
     game_explanation(difficulty)
     secret_list = generate_sequence(difficulty)
     print(f'Try to remember this list and type it again: {secret_list}')
-    time.sleep(5)
-    os.system('cls' if os.name == 'nt' else 'clear')
-
+    time.sleep(1)
+    Utils.screen_clean()
     user_list = get_list_from_user(difficulty)
     user_list = [int(x) for x in user_list]
 
     # --------------------------------------------
-    # print list !!!check!!!
-    print(f'Computer list check: {secret_list}')
-    print(f'Users list check: {user_list}')
+    # print list check
+    print(f'''Computer list check: {secret_list}
+Users list check: {user_list}''')
     # --------------------------------------------
 
     if is_list_equal(secret_list, user_list):
