@@ -13,7 +13,7 @@ Please type these numbers in write order. If you type it correctly, you win!!!
 The program generates a random number from 1 to difficulty
 Tape the numbers; you win if you choose the same number as a computer!
 
-3. Currency Roulette
+3 Currency Roulette
 The program generates random numbers from 1 to 100 for the USD amount
 The computer will convert this amount to ILS due to today's gate
 Try to guess how much it is in ILS..... 
